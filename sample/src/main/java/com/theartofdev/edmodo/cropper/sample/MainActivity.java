@@ -248,6 +248,13 @@ public class MainActivity extends AppCompatActivity {
                 mCurrentFragment.setCropImageViewOptions(mCropImageViewOptions);
                 updateDrawerTogglesByOptions(mCropImageViewOptions);
                 break;
+            case R.id.drawer_option_mirrored:
+                mCropImageViewOptions.imageMirror =
+                        mCropImageViewOptions.imageMirror == CropImageView.ImageMirror.DEFAULT
+                                ? CropImageView.ImageMirror.HORIZONTAL : CropImageView.ImageMirror.DEFAULT;
+                mCurrentFragment.setCropImageViewOptions(mCropImageViewOptions);
+                updateDrawerTogglesByOptions(mCropImageViewOptions);
+                break;
             default:
                 Toast.makeText(this, "Unknown drawer option clicked", Toast.LENGTH_LONG).show();
         }

@@ -40,4 +40,6 @@ final class CropImageViewOptions {
     public boolean showCropOverlay;
 
     public boolean showProgressBar;
+
+    public CropImageView.ImageMirror imageMirror;
 }

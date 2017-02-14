@@ -76,6 +76,7 @@ public final class MainFragment extends Fragment
         mCropImageView.setShowProgressBar(options.showProgressBar);
         mCropImageView.setAutoZoomEnabled(options.autoZoomEnabled);
         mCropImageView.setMaxZoom(options.maxZoomLevel);
+        mCropImageView.setImageMirror(options.imageMirror);
     }
 
     /**
@@ -103,6 +104,7 @@ public final class MainFragment extends Fragment
         options.showProgressBar = mCropImageView.isShowProgressBar();
         options.autoZoomEnabled = mCropImageView.isAutoZoomEnabled();
         options.maxZoomLevel = mCropImageView.getMaxZoom();
+        options.imageMirror = mCropImageView.getImageMirror();
         ((MainActivity) getActivity()).setCurrentOptions(options);
     }
 

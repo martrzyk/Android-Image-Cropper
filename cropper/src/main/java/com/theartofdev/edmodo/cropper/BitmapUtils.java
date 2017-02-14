@@ -686,6 +686,11 @@ final class BitmapUtils {
         }
     }
 
+    public static Bitmap mirrorImage(Bitmap bmp) {
+        Matrix matrix = new Matrix();
+        matrix.preScale(-1.0f, 1.0f);
+        return Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, false);
+    }
     /**
      * Close the given closeable object (Stream) in a safe way: check if it is null and catch-log
      * exception thrown.
@@ -749,4 +754,6 @@ final class BitmapUtils {
         }
     }
     //endregion
+
+
 }
